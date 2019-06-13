@@ -1,16 +1,12 @@
 //define your money count at 0/
 let wallet = 0;
-//now to the COST of the animal feed
-// let cost = [
-//   {
-//     foodCost: -10
-//   }
-// ]
+
 //now set up an object array that contains your animals
 
 let animals = [
   {
     name: "Pig",
+    image: '/images/pork.jpg',
     water: 0,
     food: 0,
     value: 250,
@@ -18,6 +14,7 @@ let animals = [
   },
   {
     name: "Goats",
+    image: '/images/goat.jpg',
     water: 0,
     food: 0,
     value: 70,
@@ -25,6 +22,7 @@ let animals = [
   },
   {
     name: "Cow",
+    image: '/images/steak.jpg',
     water: 0,
     food: 0,
     value: 1000,
@@ -53,15 +51,15 @@ function drawAnimals() {
     //   let price = cost[index];
 
     template += `
-    <div class="col-4 border border-dark">
+    <div class="col-md-4 border border-dark pb-2">
         <h1>${animal.name}</h1>
-        
+        <img src="${animal.image}"alt"">
         <p>water: ${animal.water}</p>
         <p>feed: ${animal.food}</p>
         <p>value: ${animal.value}</p>
-        <button class="btn btn-primary" onclick="water(${index})">Water</button>
-           <button class="btn btn-warning" onclick="feed(${index})">Feed</button>
-        <button class="btn btn-danger" onclick="sell(${index})">Sell</button>
+        <button class="btn btn-primary border border-dark" onclick="water(${index})">Water</button>
+           <button class="btn btn-warning border border-dark" onclick="feed(${index})">Feed</button>
+        <button class="btn btn-danger border border-dark" onclick="sell(${index})">Sell</button>
       </div>
     
     `
