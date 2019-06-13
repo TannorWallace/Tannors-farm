@@ -53,7 +53,7 @@ function drawAnimals() {
     template += `
     <div class="col-md-4 border border-dark pb-2">
         <h1>${animal.name}</h1>
-        <img src="${animal.image}"alt"">
+        <img class="border border-dark rounded-circle" src="${animal.image}"alt"">
         <p>water: ${animal.water}</p>
         <p>feed: ${animal.food}</p>
         <p>value: ${animal.value}</p>
